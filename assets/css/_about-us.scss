@@ -1,0 +1,398 @@
+.about-us {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+
+  &__vintages {
+    margin-bottom: 250px;
+
+    @include xl {
+      margin-bottom: 100px;
+    }
+
+    p {
+      margin-bottom: 70px;
+      padding: 0 40px;
+    }
+
+    img {
+      width: 100%;
+      // max-height: 730px;
+      height: 100%;
+      object-fit: cover;
+
+      &.winery-img {
+        width: calc(100% + 280px);
+        margin: 0 -140px;
+
+        @include xl {
+          width: calc(100% + 200px);
+          margin: 0 -100px;
+        }
+        @include tab {
+          width: 100%;
+          margin: 0;
+        }
+      }
+    }
+  }
+  // &__name {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   margin-bottom: 50px;
+
+  //   h2 {
+  //     font-family: "Baskerville Old Face";
+  //     font-size: 63px;
+  //     color: $title-color;
+  //     text-align: center;
+
+  //     @include xl {
+  //       font-size: 40px;
+  //     }
+
+  //     @include m2 {
+  //       font-size: 30px;
+  //     }
+  //   }
+  //   .circles {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     width: 95px;
+  //     margin-top: 5px;
+
+  //     @include m2 {
+  //       width: 55px;
+  //     }
+  //     span {
+  //       width: 25px;
+  //       height: 25px;
+  //       background-color: $title-color;
+  //       border-radius: 50%;
+  //       position: relative;
+
+  //       @include m2 {
+  //         width: 15px;
+  //         height: 15px;
+  //       }
+
+  //       &.circle1 {
+  //         right: -18px;
+
+  //         @include m2 {
+  //           right: -10px;
+  //         }
+  //       }
+  //       &.circle2 {
+  //         bottom: -25px;
+
+  //         @include m2 {
+  //           bottom: -15px;
+  //         }
+  //       }
+  //       &.circle3 {
+  //         left: -18px;
+
+  //         @include m2 {
+  //           left: -10px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  p {
+    font-family: "Century";
+    font-size: 27px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 35px;
+
+    @include xl {
+      font-size: 20px;
+    }
+  }
+
+  &__story {
+    display: flex;
+    margin-bottom: 300px;
+
+    @include xl {
+      margin-bottom: 150px;
+    }
+
+    @include tab {
+      flex-direction: column-reverse;
+    }
+    @include m2 {
+      margin-bottom: 75px;
+    }
+    &_winery {
+      @include tab {
+        flex-direction: column;
+      }
+      
+    }
+
+    .about-us__text {
+      width: 50%;
+
+      @include tab {
+        width: 100%;
+        margin-bottom: 75px;
+      }
+
+      p {
+        @include tab {
+          padding: 0 40px;
+        }
+      }
+    }
+
+    .about-us__img {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+
+      @include tab {
+        width: 100%;
+        justify-content: center;
+      }
+
+      &_left {
+        justify-content: flex-start;
+        @include tab {
+          order: 5;
+        }
+      }
+
+      img {
+        object-fit: cover;
+        width: 95%;
+
+        @include tab {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__sliders {
+    width: 100%;
+    margin-bottom: 200px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    // max-height: 900px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    // overflow: hidden;
+
+    @include tab {
+      flex-direction: column;
+    }
+
+
+    .buttons {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: transparent;
+      border: 2px solid $title-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+
+      @include tab {
+        display: none;
+      }
+      &::after {
+        content: "";
+      }
+
+      img {
+        width: 60%;
+        filter: invert(61%) sepia(60%) saturate(404%) hue-rotate(4deg) brightness(97%) contrast(88%);
+      }
+    }
+
+    .swiper-button-prev {
+      left: -70px;
+      img {
+        transform: rotate(180deg);
+      }
+    }
+    .swiper-button-next {
+      right: -70px;
+    }
+
+  }
+
+  &__left {
+    width: 45%;
+    height: 0;
+    position: relative;
+    padding-bottom: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__container1 {
+    width: 100%;
+    height: 100%;
+    // width: 45%;
+    // height: 500px;
+    // overflow: hidden;
+    
+    @include tab {
+      display: none;
+    }
+
+    .swiper-wrapper {
+      width: 100%;
+    }
+    .swiper-slide {
+      // width: 100%;
+      height: 100% !important;
+
+      img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__container2 {
+    width: 45%;
+    height: 100%;
+
+    @include tab {
+      width: 100%;
+    }
+
+    img {
+      display: none;
+
+      @include tab {
+        display: block;
+        width: 100%;
+      margin-bottom: 20px;
+      }
+      
+    }
+
+    h3 {
+      font-family: "Baskerville Old Face";
+      font-size: 40px;
+      color: $title-color;
+      text-align: center;
+      margin-bottom: 50px;
+
+      @include xl {
+        font-size: 30px;
+      }
+    }
+
+    
+  }
+  .swiper-pagination {
+    display: none;
+    @include tab {
+      display: initial;
+      bottom: -50px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      border: 2px solid $title-color;
+      background: transparent;
+      margin: 0 15px;
+      opacity: 1;
+
+      &-active {
+        background: $title-color;
+      }
+    }
+  }
+}
+
+.about-us__name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+
+  h2 {
+    font-family: "Baskerville Old Face";
+    font-size: 63px;
+    color: $title-color;
+    text-align: center;
+
+    @include xl {
+      font-size: 40px;
+    }
+
+    @include m2 {
+      font-size: 30px;
+    }
+  }
+  .circles {
+    display: flex;
+    justify-content: space-between;
+    width: 95px;
+    margin-top: 5px;
+
+    @include m2 {
+      width: 55px;
+    }
+    span {
+      width: 25px;
+      height: 25px;
+      background-color: $title-color;
+      border-radius: 50%;
+      position: relative;
+
+      @include m2 {
+        width: 15px;
+        height: 15px;
+      }
+
+      &.circle1 {
+        right: -18px;
+
+        @include m2 {
+          right: -10px;
+        }
+      }
+      &.circle2 {
+        bottom: -25px;
+
+        @include m2 {
+          bottom: -15px;
+        }
+      }
+      &.circle3 {
+        left: -18px;
+
+        @include m2 {
+          left: -10px;
+        }
+      }
+    }
+  }
+}

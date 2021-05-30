@@ -1,0 +1,181 @@
+.wines {
+  &__years {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 150px;
+
+    &.display {
+      display: none;
+    }
+    @include tab {
+      display: none;
+      flex-direction: column;
+
+      &.display {
+        display: flex;
+      }
+    }
+    span {
+      font-family: "Baskerville Old Face";
+      font-size: 50px;
+      text-align: center;
+      color: #040404;
+      cursor: pointer;
+
+      @include xl {
+        font-size: 40px;
+      }
+      @include tab {
+        font-size: 35px;
+        margin-bottom: 35px;
+      }
+
+      &.active {
+        color: $title-color;
+      }
+    }
+
+    a {
+      font-family: "Baskerville Old Face";
+      font-size: 50px;
+      text-align: center;
+      color: #040404;
+      cursor: pointer;
+
+      @include xl {
+        font-size: 40px;
+      }
+      @include tab {
+        font-size: 35px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  &__items {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    @include tab {
+      display: none;
+
+      &.mobile {
+        display: flex;
+      }
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 65px;
+
+    @include m2 {
+        flex-direction: column;
+    }
+  }
+  &__img {
+    width: 400px;
+    height: 325px;
+    margin-right: 100px;
+    background-color: black;
+    flex-shrink: 0;
+
+    @include xl {
+      margin-right: 50px;
+    }
+    @include tab {
+      width: 300px;
+      height: 200px;
+      margin-right: 15px;
+    }
+    @include m2 {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    @include sm {
+        width: 100%;
+        // height: auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    h4 {
+      font-family: "Baskerville Old Face";
+      font-size: 50px;
+      text-align: left;
+      color: #040404;
+      margin-bottom: 15px;
+
+      @include xl {
+        font-size: 40px;
+      }
+      @include tab {
+        font-size: 30px;
+      }
+    }
+    span {
+      font-family: "Baskerville Old Face";
+      font-size: 30px;
+      text-align: left;
+      color: #040404;
+      margin-bottom: 15px;
+
+      @include xl {
+        font-size: 22px;
+      }
+      @include tab {
+        font-size: 18px;
+      }
+    }
+    p {
+      font-family: "Baskerville Old Face";
+      font-size: 30px;
+      text-align: left;
+      color: #040404;
+
+      @include xl {
+        font-size: 22px;
+      }
+      @include tab {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 100px;
+
+      a {
+          width: 47px;
+          height: 22px;
+          cursor: pointer;
+          transform: rotate(180deg);
+
+          svg {
+              width: 100%;
+              height: 100%;
+          }
+      }
+
+      span {
+        font-family: "Baskerville Old Face";
+        font-size: 50px;
+        line-height: 40px;
+        color: $title-color;
+      }
+  }
+}

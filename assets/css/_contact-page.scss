@@ -1,0 +1,104 @@
+.contact-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  @include tab {
+    background: $bg-color;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    height: 100vh;
+    padding-top: 100px;
+  }
+
+  iframe {
+    width: 100%;
+    height: calc(100vh - 200px);
+
+    @include xl {
+      height: 100vh;
+    }
+    @include tab {
+        height: 450px;
+        
+    }
+  }
+  &__info {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 50%;
+    background-color: white;
+    box-shadow: -5px 3px 29px rgba(0, 0, 0, 36%);
+    padding: 150px 85px 50px 85px;
+    overflow: hidden;
+
+    @include xl {
+      padding: 40px 40px 25px 40px;
+    }
+    @include tab {
+      position: initial;
+      width: 100%;
+      box-shadow: none;
+      order: -1;
+      background: transparent;
+      text-align: center;
+      overflow: unset;
+
+    }
+
+    img {
+      position: absolute;
+      right: -240px;
+      transform: scale(1.5);
+
+      @include xl {
+        transform: scale(1.2);
+      }
+      @include lg {
+        transform: scale(1);
+      }
+      @include tab {
+        display: none;
+      }
+    }
+  }
+  &__item {
+    margin-bottom: 35px;
+    width: 65%;
+    @include xl {
+      margin-bottom: 15px;
+    }
+    @include tab {
+        width: 100%;
+        
+    }
+
+    h4 {
+      font-size: 20px;
+      text-align: left;
+      color: $title-color;
+      @include tab {
+          text-align: center;
+      }
+    }
+    p {
+      font-size: 30px;
+      line-height: 43px;
+      text-align: left;
+
+      @include xl {
+        font-size: 22px;
+      }
+      @include tab {
+          text-align: center;
+      }
+    }
+  }
+    &__socials {
+        @include tab {
+            display: none;
+        }
+    }
+}

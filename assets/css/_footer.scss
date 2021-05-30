@@ -1,0 +1,93 @@
+.footer {
+  width: 100%;
+  height: 340px;
+  position: absolute;
+  bottom: -340px;
+  z-index: 2;
+  background: url("../img/image.jpg") center center/cover no-repeat;
+
+  @include xl {
+    height: 200px;
+    bottom: -200px;
+  }
+  @include m2 {
+      height: 268px;
+      bottom: -268px;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(#000000, 0.8);
+    z-index: 0;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+
+    @include xl {
+      top: 20px;
+    }
+
+    @include m2 {
+        top: 70px;
+    }
+  }
+
+  &__mail {
+    font-family: "Baskerville Old Face";
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 40px;
+
+    @include xl {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    @include m2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    @include xl {
+      margin-bottom: 20px;
+    }
+
+    a {
+        &:first-child {
+            margin-right: 15px;
+        }
+      img {
+        width: 47px;
+        height: 47px;
+
+        @include xl {
+            width: 38px;
+            height: 38px;
+        }
+      }
+    }
+  }
+
+  &__smart {
+    font-family: "Candara";
+    font-size: 20px;
+    color: #fff;
+  }
+}
